@@ -39,7 +39,6 @@
 if [ ! -f $MAKEFILE_PATH ]; then
    echo "downloading Makefile..."
    wget https://raw.githubusercontent.com/hikalium/wasabi/main/external_app_template/Makefile
- Makefile
  fi
 
  make build

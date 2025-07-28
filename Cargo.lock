@@ -67,6 +67,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c3c8dda44ff03a2f238717214da50f65d5a53b45cd213a7370424ffdb6fae815"
 
 [[package]]
+name = "net_wasabi"
+version = "0.1.0"
+dependencies = [
+ "noli",
+ "saba_core",
+]
+
+[[package]]
 name = "noli"
 version = "0.1.0"
 source = "git+https://github.com/hikalium/wasabi.git?branch=for_saba#abf27c6f587e777fce5c53234d45d997ed075996"
@@ -107,7 +115,9 @@ dependencies = [
 name = "saba-transcription"
 version = "0.1.0"
 dependencies = [
+ "net_wasabi",
  "noli",
+ "saba_core",
 ]
 
 [[package]]
@@ -135,11 +145,3 @@ name = "unicode-ident"
 version = "1.0.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5a5f39404a5da50712a4c1eecf25e90dd62b613502b7e925fd4e4d19b5c96512"
-
-[[package]]
-name = "wasabi"
-version = "0.1.0"
-dependencies = [
- "noli",
- "saba_core",
-]

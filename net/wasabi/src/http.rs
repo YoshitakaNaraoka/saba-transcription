@@ -1,10 +1,15 @@
 extern crate alloc;
 
-use core::error::Request;
+use alloc::vec::Vec;
 
 use alloc::string::String;
 use saba_core::error::Error;
 use saba_core::http::HttpResponse;
+
+use alloc::format;
+use alloc::string::ToString;
+use noli::net::lookup_host;
+
 use noli::net::SocketAddr;
 use noli::net::TcpStream;
 

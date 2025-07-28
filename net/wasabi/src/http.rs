@@ -36,7 +36,7 @@ impl HttpClient {
     let socket_addr: SocketAddr = (ips[0], port).into(); // ソケットアドレスとは1つ目のIPアドレスとポート
     let mut stream = match TcpStream::connect(socket_addr) {
       Ok(stream) => stream,
-      Err(e) => {
+      Err(_) => {
         return Err(Error::Network("Failed to connect to TCP stream".to_string(),
         ))
       }
@@ -57,7 +57,7 @@ impl HttpClient {
 
     let _bytes_written = match stream.write(request.as_bytes()) {
       Ok(bytes) => bytes,
-      Err(e) => {
+      Err(_) => {
         return Err(Error::Network("Failed to send a request to TCP stream".to_string(),
         ))
       }

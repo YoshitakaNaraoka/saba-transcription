@@ -1,5 +1,5 @@
 # cargo new により配下に作成されると自動的に workspace に追加される
-workspace = { members = ["saba_core"] }
+workspace = { members = [ "net/wasabi","saba_core"] }
 [package]
 name = "saba-transcription"
 version = "0.1.0"
